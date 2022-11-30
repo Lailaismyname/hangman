@@ -1,0 +1,75 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~KLEUREN PALETTE ~~~~~~~~~~~~~~~~~~~~
+Mountbatten Pink                #987284
+Maximum Blue Green              #75B9BE
+Pale Spring Bud                 #D0D6B5
+Melon                           #F9B5AC
+Light Coral                     #EE7674
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+*{
+    box-sizing: border-box;
+}
+#gameBox{
+    background: #EE7674;
+    border: 5px solid #75B9BE;
+    border-radius: 5px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#word{
+    display: flex;
+    flex-direction: row;
+}
+#word > p{
+    font-size: xx-large;
+    letter-spacing: 10px;
+}
+#hangman-img{
+    width: 300px;
+}
+#keyboard{
+    height: 100px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+    border-radius: 5px;
+    background: white;
+    padding: 6px 6px;
+}
+.key-btn{
+    font-weight: 800;
+    background: #75B9BE;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.key-btn:hover{
+    background: #96b8b9;
+}
+.keyboard-top-row{
+    flex: 1 0 10%;
+}
+.keyboard-middle-row{
+    flex: 1 0 11%;
+}
+.keyboard-bottom-row{
+    flex: 1 0 11%;
+}
+/* eindscherm */
+.win-lose-msg{
+    font-size: xx-large;
+    letter-spacing: 10px;
+    color: white;
+    text-shadow: 2px 2px #75B9BE;
+}
+.newGame{
+    font-weight: 800;
+    background: #75B9BE;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
