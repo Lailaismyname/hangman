@@ -39,9 +39,7 @@ window.addEventListener('load',()=>{
             this.attempts = 0;
             this.guessed = 0;
         }
-        //methods
         start(){
-            //dit word de startfunctie
             this.shuffleArray(this.woordenlijst);
             this.renderGame();
             this.clickHandler();
@@ -82,7 +80,6 @@ window.addEventListener('load',()=>{
         printWinScreen(){
             this.attempts = 0;
             this.guessed = 0;
-            //print win box
             this.gameBox.innerHTML = '<p class="win-lose-msg">You Win!</p><button id="winBtn" class="newGame">New Game</button>';
         }
         printLoseScreen(){
@@ -92,9 +89,7 @@ window.addEventListener('load',()=>{
         }
         clickHandler(){
             this.gameBox.addEventListener('click', (e)=>{
-                //hier wat er gebeurt als er op een letter knop word gedrukt
                 if(e.target.classList.contains('key-btn')){
-                    //als letter in het woord voor komt: 
                     if(this.word.indexOf((e.target.id)) >= 0){
                         this.guessed++;
                         let pos = this.word.indexOf((e.target.id));
@@ -108,13 +103,11 @@ window.addEventListener('load',()=>{
                         }
                         e.target.style.pointerEvents = 'none';
                         e.target.style.color = '#75B9BE';
-                        //winst:
                         if(this.word.length == this.guessed){
                             this.printWinScreen();
                         }
                     }
                     else if(this.word.indexOf((e.target.id)) == -1){
-                        //als letter niet in het woord voorkomt:
                         this.attempts++;
                         document.getElementById('hangman-img').src = `img/game/afbeelding${this.attempts}.png`;
                         e.target.style.color = '#75B9BE';
@@ -124,7 +117,6 @@ window.addEventListener('load',()=>{
                         }
                     }
                 }
-                //start nieuwe game. 
                 if(e.target.classList.contains('newGame')){
                     this.score++;
                     this.renderGame();
@@ -133,7 +125,6 @@ window.addEventListener('load',()=>{
         }
 
       }
-      //hier aanroep voor game
       let hangmanGame = new Hangman();
       hangmanGame.start();
     });
